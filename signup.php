@@ -64,8 +64,7 @@ $id = "image_id";
         $r3 = $db->query($q3);
         
         if ($r3 === true)
-        {	
-	$error = "going";
+        {		
             header("Location: index.php");
             $db->close();
             exit();
@@ -73,6 +72,7 @@ $id = "image_id";
     }
     else
     {
+        $error = "going";
         $db->close();
     }
 
