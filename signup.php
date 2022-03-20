@@ -95,7 +95,7 @@ $id = "image_id";
 <body class = "background">
 <div class = "messengerWindowsignup"> 
 <h2> Sign Up <i class="fas fa-user-plus"></i> </h2>
-<form id = "signup" action="index.php" method = "post" enctype="multipart/form-data">
+<form id = "signup" method = "post" enctype="multipart/form-data">
 <input type="hidden" name="submitted" value="1"/>
   <table class = "messengerWindow2">
 <tr>
