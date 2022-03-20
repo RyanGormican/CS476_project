@@ -2,7 +2,6 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-const db = require('./db');
 const formatMessage = require('./utils/messageObject');
 const {userJoinsRoom, getCurrentUser, userLeavesRoom, getRoomUsers} = require('./utils/userHelperFunctions');
 
