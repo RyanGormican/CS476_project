@@ -23,7 +23,7 @@ $email = "";
         die ("Connection failed: " . $db->connect_error);
     }
     
-    $q1 = "SELECT * FROM User WHERE email = '$email';";
+    $q1 = "SELECT * FROM Profile WHERE email = '$email';";
     $r1 = $db->query($q1);
 
     // if the email address is already taken.
