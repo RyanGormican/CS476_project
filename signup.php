@@ -56,11 +56,8 @@ $error = "connection failure";
     }
 
     if($validate == true)
-    {
-$id = "image_id";
-	// $q2 = "INSERT INTO Image476(image_url) VALUES ('$photo')";
-        $r31259104 = $db->query($q2);
-      $q3 ="INSERT INTO Profile (email, profile_name, password, type) VALUES ('$email', '$username','$password','member')";
+    {	
+      $q3 ="INSERT INTO Profile (email, profile_name, password, type) VALUES ('$email', '$username','$password', member)";
         $r3 = $db->query($q3);
         
         if ($r3 === true)
