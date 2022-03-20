@@ -15,16 +15,15 @@ $email = "";
     $email = trim($_POST["email"]);
     $username = trim($_POST["username"]);
     $password = trim($_POST["password"]); 
- //$photo = basename($_FILES["fileToUpload"]["name"]);
-//$photo = trim($photo);
+ 
      $db = new mysqli("us-cdbr-east-05.cleardb.net", "b59706ca4e953f", "7aab941f", "heroku_4db4cf2503e4bbb");
     if ($db->connect_error)
     {
-$error = "connection failure";
+        $error = "connection failure";
         die ("Connection failed: " . $db->connect_error);
     }
     
-    $q1 = "SELECT * FROM User WHERE email = '$email'";
+    $q1 = "SELECT * FROM User WHERE email = '$email';";
     $r1 = $db->query($q1);
 
     // if the email address is already taken.
@@ -57,7 +56,7 @@ $error = "connection failure";
 
     if($validate == true)
     {	
-      $q3 ="INSERT INTO Profile (email, profile_name, password, type) VALUES ('$email', '$username','$password', member)";
+        $q3 ="INSERT INTO Profile (email, profile_name, password, type) VALUES ('$email', '$username','$password', 'member');";
         $r3 = $db->query($q3);
         
         if ($r3 === true)

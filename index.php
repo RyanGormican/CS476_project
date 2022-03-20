@@ -66,7 +66,7 @@ if (isset($_POST["submitted"]) && $_POST["submitted"])
 <h2 class = "maintitle" > <i class="fa-solid fa-globe"></i>  Jibbernet <i class="fa-solid fa-globe"></i> </h2>
 
 <body class = "background">
-<form id= "login" method ="post">
+<form id= "login" action="index.php" method ="post">
 <input type="hidden" name="submitted" value="1"/>
 <table class = "messengerWindow2">
       <tr>
