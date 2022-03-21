@@ -4,7 +4,7 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 // get username and room from URL
-const { username, room } = Qs.parse(location.search, {
+const userDetail = { username, room } = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
 
@@ -40,7 +40,7 @@ chatForm.addEventListener('submit', (e) => {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // emitting a messsage to the server
-    console.log(Object.values(data[0]));
+    console.log(userDetail.userName.value());
     const msg = formatMessage({username}, text, time);
     outputMessage(msg);
 
