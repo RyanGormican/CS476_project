@@ -1,3 +1,14 @@
+// output message to DOM
+function outputMessage(message) {
+    const div = document.createElement('div');
+    div.classList.add('message');
+    div.innerHTML = `<p class="meta">${message.userName} <span>${message.time}</span></p>
+    <p class="text">
+        ${message.text}
+    </p>`;
+    document.querySelector('.chat-messages').appendChild(div);
+}
+
 // check if there are new posts every 2 seconds.
 // if there are new posts, insert them at the top and delete posts at the end if total posts exceed 20
 setInterval (updateMessages, 2000); // 2000 = 2 seconds.

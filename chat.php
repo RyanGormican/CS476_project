@@ -10,16 +10,6 @@ if(isset($_SESSION["email"])) {
 
     $room = $_GET['b'];
 
-    CREATE TABLE IF NOT EXISTS Messages (
-        message_id INT NOT NULL AUTO_INCREMENT,
-        user_id INT,
-        username VARCHAR(25),
-        message TEXT,
-        message_date DATETIME,    
-        room VARCHAR(25),
-        PRIMARY KEY (message_id),
-    );
-
     $db->close();
 }
 else
