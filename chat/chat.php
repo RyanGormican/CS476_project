@@ -64,7 +64,7 @@ header("Location: index.php");
             
             <div class="chat-form-container">
                 <form id="chat-form" action="messagesToDB.php">
-                    <input type="hidden" name="group_id" value="<?=$group_id?>"></input> 
+                    <input type="hidden" name="group_id" value=""></input> 
                     <input
                         id="msg"
                         name="text"
