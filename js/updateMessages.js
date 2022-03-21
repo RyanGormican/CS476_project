@@ -9,6 +9,20 @@ function outputMessage(message) {
     document.querySelector('.chat-messages').appendChild(div);
 }
 
+// message submition
+chatForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // prevents from submitting to a form
+    
+    // get message text value
+    const msg = e.target.elements.msg.value;
+    // emitting a messsage to the server
+    socket.emit('chatMessage', msg);
+
+    // clear message input after user presses enter
+    e.target.elements.msg.value = '';
+    e.target.elements.msg.focus();
+});
+
 // check if there are new posts every 2 seconds.
 // if there are new posts, insert them at the top and delete posts at the end if total posts exceed 20
 setInterval (updateMessages, 2000); // 2000 = 2 seconds.
@@ -49,6 +63,14 @@ function updateMessages() {
             var responseObj = JSON.parse(result);
             console.log("checking for new posts");            
             
+            // add new messages
+            const div = document.createElement('div');
+            div.classList.add('message');
+            div.innerHTML = `<p class="meta">${message.userName} <span>${message.time}</span></p>
+            <p class="text">
+            ${message.text}
+            </p>`;
+    document.querySelector('.chat-messages').appendChild(div);
             // add new posts
             // Should have made posts less complicated...            
             for (var i = 0; i < responseObj.length; i++) {
