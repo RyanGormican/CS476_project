@@ -42,13 +42,13 @@ header("Location: index.php");
 
 <body>
     <header class="navBar">  
-                <h3 class="navTitle"><a href="viewgroups.php">jibbernet</a></h3>
+                <h3 class="navTitle"><a href="../viewgroups.php">jibbernet</a></h3>
                                          
     </header>  
         <div class="chat-container">
             <header class="chat-header">
                 <h2 id="room-name"></h2>                
-                <a href="viewgroups.php" class="btn" id="leave-btn">Leave Room</a>
+                <a href="../viewgroups.php" class="btn" id="leave-btn">Leave Room</a>
             </header>
             <main class="chat-main">
                 <div class="chat-messages">	
