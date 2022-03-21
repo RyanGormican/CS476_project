@@ -40,8 +40,8 @@ chatForm.addEventListener('submit', (e) => {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // emitting a messsage to the server
-    console.log(userDetail.username.value());
-    const msg = formatMessage(userDetail.username.value(), text, time);
+    console.log(userDetail.username);
+    const msg = formatMessage(userDetail.username, text, time);
     outputMessage(msg);
 
     // scroll down in message window
