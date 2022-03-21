@@ -1,3 +1,21 @@
+const chatForm = document.getElementById('chat-form');
+const chatMessages = document.querySelector('.chat-messages');
+const roomName = document.getElementById('room-name');
+const userList = document.getElementById('users');
+
+// get username and room from URL
+const { username, room } = Qs.parse(location.search, {
+    ignoreQueryPrefix: true
+});
+
+function formatMessage(userName, text, time) {
+    return {
+        userName,
+        text,
+        time
+    }
+};
+
 // output message to DOM
 function outputMessage(message) {
     const div = document.createElement('div');
@@ -9,18 +27,19 @@ function outputMessage(message) {
     document.querySelector('.chat-messages').appendChild(div);
 }
 
-const chatForm = document.getElementById('chat-form');
-const chatMessages = document.querySelector('.chat-messages');
-const roomName = document.getElementById('room-name');
-const userList = document.getElementById('users');
+
 
 // message submition
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault(); // prevents from submitting to a form
     
     // get message text value
-    const msg = e.target.elements.msg.value;
+    const text= e.target.elements.msg.value;
+    // get time
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // emitting a messsage to the server
+    const msg = formatMessage(username, text, time);
     outputMessage(msg);
 
     // scroll down in message window
