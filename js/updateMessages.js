@@ -19,14 +19,14 @@ chatForm.addEventListener('submit', (e) => {
     e.preventDefault(); // prevents from submitting to a form
     
     // get message text value
-    // const msg = e.target.elements.msg.value;
-    // // emitting a messsage to the server
-    // const div = document.createElement('div');
-    //         div.classList.add('message');
-    //         div.innerHTML = `<p class="meta"> <span></span></p>
-    //         <p class="text">
+    const msg = e.target.elements.msg.value;
+    // emitting a messsage to the server
+    const div = document.createElement('div');
+            div.classList.add('message');
+            div.innerHTML = `<p class="meta"> <span></span></p>
+            <p class="text">
             
-    //         </p>`;
+            </p>`;
 
     // clear message input after user presses enter
     e.target.elements.msg.value = '';
