@@ -8,7 +8,8 @@ if(isset($_SESSION["email"])) {
     $name = $_SESSION['name'];
     $id = $_SESSION['id'];
 
-    $room = $_GET['b'];
+    $room_name = $_GET['room'];
+    $group_id = $_GET['g_id']
 
     // CREATE TABLE IF NOT EXISTS Messages (
     //     idMessages INT NOT NULL AUTO_INCREMENT,
@@ -47,7 +48,7 @@ header("Location: index.php");
     </header>  
         <div class="chat-container">
             <header class="chat-header">
-                <h2 id="room-name"></h2>                
+                <h2 id="room-name"><?print $room_name ?></h2>               
                 <a href="../viewgroups.php" class="btn" id="leave-btn">Leave Room</a>
             </header>
             <main class="chat-main">
@@ -63,13 +64,15 @@ header("Location: index.php");
             
             <div class="chat-form-container">
                 <form id="chat-form" action="messagesToDB.php">
-                  <input
-                    id="msg"
-                    type="text"
-                    placeholder="Type something"
-                    required
-                    autocomplete="off"
-                  />
+                    <input type="hidden" name="group_id" value="<?=$group_id?>"></input> 
+                    <input
+                        id="msg"
+                        name="text"
+                        type="text"
+                        placeholder="Type something"
+                        required
+                        autocomplete="off"
+                    />
                   <button class="btn">Send</button>                
                 </form>
             </div>                   
