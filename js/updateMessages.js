@@ -1,13 +1,13 @@
 // output message to DOM
-// function outputMessage(message) {
-//     const div = document.createElement('div');
-//     div.classList.add('message');
-//     div.innerHTML = `<p class="meta">${message.userName} <span>${message.time}</span></p>
-//     <p class="text">
-//         ${message.text}
-//     </p>`;
-//     document.querySelector('.chat-messages').appendChild(div);
-// }
+function outputMessage(message) {
+    const div = document.createElement('div');
+    div.classList.add('message');
+    div.innerHTML = `<p class="meta">${message.userName} <span>${message.time}</span></p>
+    <p class="text">
+        ${message.text}
+    </p>`;
+    document.querySelector('.chat-messages').appendChild(div);
+}
 
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
@@ -21,12 +21,7 @@ chatForm.addEventListener('submit', (e) => {
     // get message text value
     const msg = e.target.elements.msg.value;
     // emitting a messsage to the server
-    const div = document.createElement('div');
-            div.classList.add('message');
-            div.innerHTML = `<p class="meta"> <span></span></p>
-            <p class="text">
-            
-            </p>`;
+    outputMessage(msg);
 
     // clear message input after user presses enter
     e.target.elements.msg.value = '';
