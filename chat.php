@@ -47,7 +47,7 @@ header("Location: index.php");
     </header>  
         <div class="chat-container">
             <header class="chat-header">
-                <h2 id="room-name"><?php $room ?></h2>                
+                <h2 id="room-name"></h2>                
                 <a href="viewgroups.php" class="btn" id="leave-btn">Leave Room</a>
             </header>
             <main class="chat-main">
@@ -57,7 +57,7 @@ header("Location: index.php");
             </main>   
             <div class="chat-sidebar">   
                 <h3> Users</h3>
-                <ul id="users"><?php <span>$name</span> ?>
+                <ul id="users">
                 </ul>
             </div>  
             
