@@ -10,6 +10,16 @@ if(isset($_SESSION["email"])) {
 
     $room = $_GET['b'];
 
+    // CREATE TABLE IF NOT EXISTS Messages (
+    //     idMessages INT NOT NULL AUTO_INCREMENT,
+    //     user_id INT,        
+    //     text TEXT,        
+    //     message_date DATETIME,    
+    //     profilename VARCHAR(25),
+    //     groupedid INT,
+    //     PRIMARY KEY (idMessages),
+    // );
+
     $db->close();
 }
 else
@@ -32,13 +42,13 @@ header("Location: index.php");
 
 <body>
     <header class="navBar">  
-                <h3 class="navTitle"><a href="index.html">jibbernet</a></h3>
+                <h3 class="navTitle"><a href="viewgroups.php">jibbernet</a></h3>
                                          
     </header>  
         <div class="chat-container">
             <header class="chat-header">
-                <h2 id="room-name"></h2>                
-                <a href="index.html" class="btn" id="leave-btn">Leave Room</a>
+                <h2 id="room-name"><?php $room ?></h2>                
+                <a href="viewgroups.php" class="btn" id="leave-btn">Leave Room</a>
             </header>
             <main class="chat-main">
                 <div class="chat-messages">	
@@ -47,7 +57,7 @@ header("Location: index.php");
             </main>   
             <div class="chat-sidebar">   
                 <h3> Users</h3>
-                <ul id="users">
+                <ul id="users"><?php <span>$name</span> ?>
                 </ul>
             </div>  
             
