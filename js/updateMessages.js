@@ -4,12 +4,10 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 // get username and room from URL
-const username = Qs.parse(location.search, {
+const { username, room } = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
-const room = Qs.parse(location.search, {
-    ignoreQueryPrefix: true
-});
+
 
 function formatMessage(userName, text, time) {
     return {
@@ -42,8 +40,8 @@ chatForm.addEventListener('submit', (e) => {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // emitting a messsage to the server
-    console.log(username.userName);
-    const msg = formatMessage(username.userName, text, time);
+    console.log({username});
+    const msg = formatMessage({username}, text, time);
     outputMessage(msg);
 
     // scroll down in message window
