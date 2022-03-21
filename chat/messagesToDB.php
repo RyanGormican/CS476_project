@@ -13,7 +13,7 @@ if(isset($_SESSION["email"])) {
         die ("Connection failed: " . $db->connect_error);
     }
 
-    $q = "INSERT INTO messages (Text, Time, profilename, groupedid) VALUES ('$text', '$time', '$name', '$group_id');";
+    $q = "INSERT INTO heroku_4db4cf2503e4bbb.messages (Text, Time, profilename, groupedid) VALUES ('$text', '$time', '$name', '$group_id');";
     $result = $db->query($q);
 
     $db->close();
