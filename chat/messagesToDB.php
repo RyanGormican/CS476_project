@@ -4,7 +4,7 @@ if(isset($_SESSION["email"])) {
 
     $id = $_SESSION['id'];
     $text = $_POST['text'];
-    $time = $_POST[''];
+    $time = date('Y-m-d H:i:s');
     $name = $_SESSION['name'];
     $group_id = 
     

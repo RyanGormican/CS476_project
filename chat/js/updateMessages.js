@@ -32,7 +32,7 @@ function outputMessage(message) {
 
 // message submition
 chatForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // prevents from submitting to a form
+    // e.preventDefault(); // prevents from submitting to a form
     
     // get message text value
     const text= e.target.elements.msg.value;
