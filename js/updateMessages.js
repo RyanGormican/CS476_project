@@ -18,9 +18,9 @@ chatForm.addEventListener('submit', (e) => {
     // emitting a messsage to the server
     const div = document.createElement('div');
             div.classList.add('message');
-            div.innerHTML = `<p class="meta">${message.userName} <span>${message.time}</span></p>
+            div.innerHTML = `<p class="meta"> <span></span></p>
             <p class="text">
-            ${msg}
+            
             </p>`;
 
     // clear message input after user presses enter
