@@ -60,7 +60,7 @@ header("Location: index.php");
 //$answer10 = $_POST[10]; 
 $correctanswer = 0;
 $message = "";
-if (!empty($_POST)){
+if (isset($_POST["submitted"]) && $_POST["submitted"]){
   for ($loop = 1; $loop<= 10; $loop++){
   $question = $loop . "question";
   $rightquestion = $question . "win";
