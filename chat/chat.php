@@ -48,7 +48,7 @@ header("Location: index.php");
     </header>  
         <div class="chat-container">
             <header class="chat-header">
-                <h2 id="room-name"><?=$room_name ?></h2>               
+                <h2 id="room-name"></h2>               
                 <a href="../viewgroups.php" class="btn" id="leave-btn">Leave Room</a>
             </header>
             <main class="chat-main">
