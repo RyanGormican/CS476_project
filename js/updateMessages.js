@@ -23,6 +23,9 @@ chatForm.addEventListener('submit', (e) => {
     // emitting a messsage to the server
     outputMessage(msg);
 
+    // scroll down in message window
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
     // clear message input after user presses enter
     e.target.elements.msg.value = '';
     e.target.elements.msg.focus();
