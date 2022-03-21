@@ -6,7 +6,7 @@ if(isset($_SESSION["email"])) {
     $text = $_POST['text'];
     $time = date('Y-m-d H:i:s');
     $name = $_SESSION['name'];
-    $group_id = 
+    $group_id = ['group_id'];
     
     $db = new mysqli("us-cdbr-east-05.cleardb.net", "b59706ca4e953f", "7aab941f", "heroku_4db4cf2503e4bbb");
     if ($db->connect_error) {
