@@ -70,7 +70,7 @@ header("Location: index.php");
                     required
                     autocomplete="off"
                   />
-                  <button type="submit" class="btn">Send</button>                
+                  <button class="btn">Send</button>                
                 </form>
             </div>                   
         </div> 
