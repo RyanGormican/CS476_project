@@ -84,6 +84,6 @@ header("Location: index.php");
         referrerpolicy="no-referrer">
     </script>
     
-    <script type="text/javascript" src="/js/updateMessages.js"></script>
+    <script type="text/javascript" src="./js/updateMessages.js"></script>
 </body>
 </html>
