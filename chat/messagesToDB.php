@@ -5,10 +5,13 @@ if(isset($_SESSION["email"])) {
     if ($db->connect_error) {
         die ("Connection failed: " . $db->connect_error);
     }
-    $name = $_SESSION['name'];
+    
     $id = $_SESSION['id'];
-
-    $room = $_GET['b'];
+    $text = $_POST[''];
+    $time = $_POST[''];
+    $name = $_SESSION['name'];
+    $group_id = 
+            
 
     // CREATE TABLE IF NOT EXISTS Messages (
     //     idMessages INT NOT NULL AUTO_INCREMENT,

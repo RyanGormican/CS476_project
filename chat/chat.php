@@ -62,7 +62,7 @@ header("Location: index.php");
             </div>  
             
             <div class="chat-form-container">
-                <form id="chat-form">
+                <form id="chat-form" action="messagesToDB.php">
                   <input
                     id="msg"
                     type="text"
