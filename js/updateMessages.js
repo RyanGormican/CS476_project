@@ -40,7 +40,7 @@ chatForm.addEventListener('submit', (e) => {
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // emitting a messsage to the server
-    console.log({username});
+    console.log(Object.values(data[0]));
     const msg = formatMessage({username}, text, time);
     outputMessage(msg);
 
