@@ -16,7 +16,12 @@ chatForm.addEventListener('submit', (e) => {
     // get message text value
     const msg = e.target.elements.msg.value;
     // emitting a messsage to the server
-    socket.emit('chatMessage', msg);
+    const div = document.createElement('div');
+            div.classList.add('message');
+            div.innerHTML = `<p class="meta">${message.userName} <span>${message.time}</span></p>
+            <p class="text">
+            ${msg}
+            </p>`;
 
     // clear message input after user presses enter
     e.target.elements.msg.value = '';
@@ -24,7 +29,7 @@ chatForm.addEventListener('submit', (e) => {
 });
 
 // check if there are new posts every 2 seconds.
-// if there are new posts, insert them at the top and delete posts at the end if total posts exceed 20
+// if there are new posts, insert them at the bottom
 setInterval (updateMessages, 2000); // 2000 = 2 seconds.
 function updateMessages() {
     var xhr = new XMLHttpRequest();
